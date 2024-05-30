@@ -1,0 +1,23 @@
+.main-nav.guest{
+    background-color: black;
+    font-family: "Nanum Gothic Coding", monospace;
+    
+    .page-logo {
+        
+        color: white;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 2rem;
+            
+    }
+    .nav-link {
+        font-size: 1.2rem;
+    }
+
+}
+
+main.guest {
+    background-color: white;
+    min-height: 100vh;
+    padding: 2rem;
+}

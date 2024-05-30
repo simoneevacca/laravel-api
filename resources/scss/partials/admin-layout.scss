@@ -1,0 +1,24 @@
+
+.main-nav.admin{
+    background-color: var(--bg-dark);
+    font-family: "Nanum Gothic Coding", monospace;
+    
+    .page-logo {
+        
+        color: white;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 2rem;
+            
+    }
+    .nav-link {
+        font-size: 1.2rem;
+    }
+
+}
+
+main.admin {
+    background-color: var(--bg-light);
+    min-height: 100vh;
+    padding: 2rem;
+}

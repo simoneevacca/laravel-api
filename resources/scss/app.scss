@@ -1,0 +1,22 @@
+@use 'partials/admin-layout.scss';
+@use 'partials/guest-layout.scss';
+
+@use 'partials/projects-index.scss';
+@use 'partials/projects-show.scss';
+
+
+
+@import '~bootstrap/scss/bootstrap';
+
+:root {
+    --bg-dark: rgb(7, 0, 44);
+    --bg-light: rgb(14, 12, 24);;
+}
+
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
