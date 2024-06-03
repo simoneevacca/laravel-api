@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('preview_image', 255)->nullable();
             $table->string('link_view', 255)->nullable();
             $table->string('link_code', 255)->nullable();
+            $table->boolean('in_evidence')->nullable()->default('0');
 
             $table->timestamps();
         });

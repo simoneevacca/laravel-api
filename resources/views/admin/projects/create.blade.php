@@ -49,23 +49,27 @@
                 <select class="form-select form-select-lg" name="type_id" id="type_id">
                     <option value="none" selected disabled>Select type of project</option>
                     @foreach ($types as $type)
-                    <option value="{{ $type->id }}" {{ $type->id == old('type_id') ? 'selected' : '' }}>{{ $type->type_name }}</option>
-                    @endforeach                   
+                        <option value="{{ $type->id }}" {{ $type->id == old('type_id') ? 'selected' : '' }}>
+                            {{ $type->type_name }}</option>
+                    @endforeach
                 </select>
             </div>
 
 
 
             @foreach ($technologies as $technology)
-            <div class="form-check text-white">
+                <div class="form-check text-white">
 
-                <input name="technologies[]" class="form-check-input " type="checkbox" value="{{$technology->id}}" id="technology-{{$technology->id}}" {{ in_array($technology->id, old('technologies', [])) ? 'checked' : '' }} />
-                <label class="form-check-label" for="technology-{{$technology->id}}">{{$technology->name}} </label>
+                    <input name="technologies[]" class="form-check-input " type="checkbox" value="{{ $technology->id }}"
+                        id="technology-{{ $technology->id }}"
+                        {{ in_array($technology->id, old('technologies', [])) ? 'checked' : '' }} />
+                    <label class="form-check-label" for="technology-{{ $technology->id }}">{{ $technology->name }}
+                    </label>
 
-            </div>
+                </div>
             @endforeach
 
-            
+
 
             <div class="mb-3">
                 <label for="link_view" class="form-label text-white">Link view</label>
@@ -87,6 +91,10 @@
                 <div class="text-danger">{{ $message }}</div>
             @enderror
 
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="1" id="in_evidence" />
+                <label class="form-check-label" for="in_evidence"> In evidence? </label>
+            </div>
 
 
             <button type="submit" class="btn btn-primary">

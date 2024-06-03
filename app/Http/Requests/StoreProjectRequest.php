@@ -30,6 +30,7 @@ class StoreProjectRequest extends FormRequest
             'preview_image' => 'nullable|max:255',
             'link_view' => 'nullable|max:255',
             'link_code' => 'nullable|max:255',
+            'in_evidence' => 'nullable',
         ];
     }
 }
