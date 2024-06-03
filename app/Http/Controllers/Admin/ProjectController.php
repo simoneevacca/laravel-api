@@ -38,8 +38,8 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
-        // dd($request);
         $val_data = $request->validated();
+        // dd($val_data);
         
         $slug = Str::slug($request->project_name, '-');
         $val_data['slug'] = $slug;

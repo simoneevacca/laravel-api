@@ -35,5 +35,14 @@ public function show($id){
 
 }
 
+public function evidence(){
+    $project = Project::all();
+    $evidence = Project::with('technologies', 'type')->where('in_evidence', 1)->get();
+    return response()->json([
+        'success' => true,
+        'results' => $evidence
+    ]);
+}
+
 }
 
