@@ -92,7 +92,7 @@
             @enderror
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="1" id="in_evidence" />
+                <input name="in_evidence" class="form-check-input" type="checkbox" value="{{ true }}" id="in_evidence" />
                 <label class="form-check-label" for="in_evidence"> In evidence? </label>
             </div>
 
