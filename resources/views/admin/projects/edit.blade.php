@@ -22,6 +22,17 @@
 
 
             <div class="mb-3">
+                <label for="sub_title" class="form-label text-white">Project Name</label>
+                <input type="text" name="sub_title" id="sub_title" class="form-control" placeholder=""
+                    aria-describedby="sub_titleId" value="{{ old('sub_title', $project->sub_title) }}" />
+            </div>
+            @error('sub_title')
+                <div class="text-danger">{{ $message }}</div>
+            @enderror
+
+
+
+            <div class="mb-3">
                 <label for="description" class="form-label text-white">Description</label>
                 <textarea class="form-control" name="description" id="description" rows="6">{{ old('description', $project->description) }}</textarea>
             </div>
